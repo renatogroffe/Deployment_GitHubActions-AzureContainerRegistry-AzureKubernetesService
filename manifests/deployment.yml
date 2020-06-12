@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: apicontagemk8s 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apicontagemk8s 
+    spec:
+      containers:
+        - name: apicontagemk8s
+          image: groffegithubactions.azurecr.io/apicontagemk8s
+          ports:
+          - containerPort: 80
